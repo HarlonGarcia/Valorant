@@ -1,5 +1,6 @@
 # Valorant
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
 This project consumes an API wich contains the information about Valorant agents, maps and weapons.
 
 ## Available scripts
