@@ -9,7 +9,7 @@ import {
 const NavBar = () => {
   return (
     <div className="w-screen bg-blue-dark mx-auto h-20 flex items-center justify-center md:w-full overflow-x-hidden">
-      <ul className="flex text-white mx-auto">
+      <ul className="flex text-white font-montserrat mx-auto">
         <li className="flex items-center hover:text-red cursor-pointer mr-5 sm:mr-10 lg:mr-28">
           <HomeIcon className="h-6 w-6 mr-2" />
           <h3 className="hidden sm:block">Home</h3>

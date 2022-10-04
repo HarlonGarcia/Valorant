@@ -3,7 +3,12 @@ import "./AnimatedBg.css";
 
 const AnimatedBg = () => {
   return (
-    <div className="background">
+    <div className="background brightness-25">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
       <span></span>
       <span></span>
       <span></span>

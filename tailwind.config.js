@@ -11,6 +11,9 @@ module.exports = {
       fontFamily: {
         montserrat: ["Montserrat", "sans-serif"],
       },
+      brightness: {
+        25: ".25",
+      },
     },
     colors: {
       blue: {
