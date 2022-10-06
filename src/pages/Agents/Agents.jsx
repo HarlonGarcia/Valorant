@@ -69,7 +69,7 @@ const Agents = () => {
                     <h2 className="font-montserrat font-black text-center sm:text-left text-lg sm:text-xl text-red-dark group-hover:text-white">
                       {displayName}
                     </h2>
-                    <p className=" font-montserrat text-white text-sm sm:text-lg sm:max-h-44 py-2 max-w-64 overflow-ellipsis overflow-hidden">
+                    <p className="font-montserrat text-white text-sm sm:text-lg sm:max-h-44 py-2 max-w-64 overflow-ellipsis overflow-hidden">
                       {description}
                     </p>
                   </div>
