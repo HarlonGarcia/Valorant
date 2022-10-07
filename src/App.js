@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import NavBar from "./components/NavBar";
+import ScrollButton from "./components/ScrollButton";
 import Agent from "./pages/Agent/Agent";
 import Agents from "./pages/Agents/Agents";
 import Home from "./pages/Home/Home";
@@ -15,6 +16,7 @@ function App() {
         <Route path="agents" element={<Agents />} />
         <Route path="agents/:id" element={<Agent />} />
       </Routes>
+      <ScrollButton />
     </BrowserRouter>
   );
 }

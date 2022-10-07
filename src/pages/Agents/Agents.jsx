@@ -32,7 +32,7 @@ const Agents = () => {
     <div className="flex flex-col bg-blue-dark h-full sm:w-full justify-center items-center p-8">
       {loading && <LoadingSpinner />}
       {!loading && !error && (
-        <h1 className="font-montserrat text-blue-light py-4 mb-4">
+        <h1 className="font-montserrat text-blue-light py-4 mb-4 md:text-lg xl:text-xl 2xl:text-3xl">
           *Clique no card do agente para ver mais informações
         </h1>
       )}
