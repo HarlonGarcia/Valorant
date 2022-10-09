@@ -2,6 +2,7 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import LoadingSpinner from "../../components/LoadingSpinner/LoadingSpinner";
+import Abilities from "../../components/Abilities/Abilities";
 import { agents_images } from "../../utils/agents_images";
 
 const Agent = () => {
@@ -26,7 +27,7 @@ const Agent = () => {
   return (
     <div className="flex flex-col bg-blue-dark h-full w-full items-center justify-center p-8 sm:py-14">
       {loading && <LoadingSpinner />}
-      <div className="max-w-2xl lg:max-w-3xl">
+      <div className="max-w-2xl lg:max-w-3xl mb-12">
         {!loading && !error && (
           <div className="flex flex-col items-center sm:grid sm:grid-cols-2 sm:px-4 lg:px-0">
             <h2 className="text-red font-montserrat text-3xl font-bold inline-block mb-4 sm:text-4xl lg:text-5xl md:mb-2 lg:mb-0">
@@ -62,6 +63,7 @@ const Agent = () => {
           </div>
         )}
       </div>
+      {!loading && !error && <Abilities abilities={agent.abilities} />}
     </div>
   );
 };
