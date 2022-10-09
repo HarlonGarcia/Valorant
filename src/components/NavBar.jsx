@@ -9,7 +9,7 @@ import {
 
 const NavBar = () => {
   return (
-    <div className="w-screen bg-blue-dark mx-auto h-16 2xl:h-20 flex items-center justify-center md:w-full overflow-x-hidden">
+    <div className="w-screen bg-blue-dark border-blue border-b-4 mx-auto h-16 2xl:h-20 flex items-center justify-center md:w-full overflow-x-hidden">
       <ul className="flex text-white font-montserrat mx-auto">
         <NavLink
           end

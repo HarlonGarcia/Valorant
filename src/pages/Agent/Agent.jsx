@@ -1,15 +1,22 @@
-import axios from "axios";
 import React, { useEffect, useState } from "react";
+import axios from "axios";
 import { useParams } from "react-router-dom";
 import LoadingSpinner from "../../components/LoadingSpinner/LoadingSpinner";
 import Abilities from "../../components/Abilities/Abilities";
 import { agents_images } from "../../utils/agents_images";
+import { SpeakerWaveIcon } from "@heroicons/react/24/solid";
 
 const Agent = () => {
   const [loading, setLoading] = useState(true);
   const [agent, setAgent] = useState(null);
   const [error, setError] = useState(null);
   const { id } = useParams();
+  const audio = new Audio(`${agent?.voiceLine.mediaList[0].wave}`);
+
+  const playAudio = () => {
+    audio.currentTime = 0;
+    audio.play();
+  };
 
   useEffect(() => {
     axios(
@@ -30,9 +37,15 @@ const Agent = () => {
       <div className="max-w-2xl lg:max-w-3xl mb-12">
         {!loading && !error && (
           <div className="flex flex-col items-center sm:grid sm:grid-cols-2 sm:px-4 lg:px-0">
-            <h2 className="text-red font-montserrat text-3xl font-bold inline-block mb-4 sm:text-4xl lg:text-5xl md:mb-2 lg:mb-0">
-              {agent.displayName}
-            </h2>
+            <div
+              onClick={playAudio}
+              className="flex text-red hover:text-red-light ease-in duration-300 w-fit cursor-pointer items-center mb-4 md:mb-2 lg:mb-0"
+            >
+              <h2 className="font-montserrat text-3xl font-bold mr-2 lg:mr-3 sm:text-4xl lg:text-5xl">
+                {agent.displayName}
+              </h2>
+              <SpeakerWaveIcon className="h-7 w-7 lg:h-9 lg:w-9" />
+            </div>
             <img
               className="mb-8 sm:pl-4 row-span-3 sm:mb-0 lg:row-span-3 max-h-96 sm:max-h-max"
               src={agents_images[agent.displayName]}
