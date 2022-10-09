@@ -63,7 +63,9 @@ const Agent = () => {
           </div>
         )}
       </div>
-      {!loading && !error && <Abilities abilities={agent.abilities} />}
+      <div className="max-w-2xl lg:max-w-3xl">
+        {!loading && !error && <Abilities abilities={agent.abilities} />}
+      </div>
     </div>
   );
 };

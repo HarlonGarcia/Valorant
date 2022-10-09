@@ -1,13 +1,31 @@
 import React, { useEffect, useState } from "react";
-import axios from "axios";
-import LoadingSpinner from "../../components/LoadingSpinner/LoadingSpinner";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
+import { motion } from "framer-motion";
+import LoadingSpinner from "../../components/LoadingSpinner/LoadingSpinner";
 
 const Agents = () => {
   const [loading, setLoading] = useState(true);
   const [agents, setAgents] = useState(null);
   const [error, setError] = useState(null);
   const navigate = useNavigate();
+
+  const container = {
+    visible: {
+      transition: {
+        delayChildren: 0.2,
+        staggerChildren: 0.075,
+      },
+    },
+  };
+
+  const item = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+    },
+  };
 
   useEffect(() => {
     axios(
@@ -36,7 +54,12 @@ const Agents = () => {
           *Clique no card do agente para ver mais informações
         </h1>
       )}
-      <div className="flex flex-col sm:flex-row sm:flex-wrap justify-center">
+      <motion.ul
+        className="flex flex-col sm:flex-row sm:flex-wrap justify-center"
+        variants={container}
+        initial="hidden"
+        animate="visible"
+      >
         {!loading &&
           !error &&
           agents.map(
@@ -53,12 +76,13 @@ const Agents = () => {
               // eslint-disable-next-line
               if (!isPlayableCharacter) return;
               return (
-                <div
+                <motion.li
                   onClick={handleClick}
                   key={index}
                   id={uuid}
                   className="group bg-red mb-8 object-cover sm:flex-col sm:w-56 lg:w-64 sm:m-4 lg:m-4 border-4 border-blue sm:flex
                hover:bg-blue-light hover:scale-[1.025] cursor-pointer"
+                  variants={item}
                 >
                   <img
                     className="w-full bg-blue sm:h-56 sm:w-56 lg:w-64 lg:h-64 group-hover:grayscale-[55%]"
@@ -73,11 +97,11 @@ const Agents = () => {
                       {description}
                     </p>
                   </div>
-                </div>
+                </motion.li>
               );
             }
           )}
-      </div>
+      </motion.ul>
     </div>
   );
 };

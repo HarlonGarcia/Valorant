@@ -1,8 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
+import { useInView } from "framer-motion";
 import "./Abilities.css";
 
 const Abilities = ({ abilities }) => {
   const [currentAbility, setCurrentAbility] = useState(0);
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
 
   const handleClick = ({ currentTarget }) => {
     const old = document.getElementsByClassName("active-skill");
@@ -14,7 +17,14 @@ const Abilities = ({ abilities }) => {
 
   if (!abilities) return;
   return (
-    <div className="max-w-2xl lg:max-w-3xl">
+    <div
+      ref={ref}
+      style={{
+        transform: isInView ? "none" : "translateX(-200px)",
+        opacity: isInView ? 1 : 0,
+        transition: "all 0.7s cubic-bezier(.32,-0.01,0,1.01) 0.5s",
+      }}
+    >
       <div className="flex justify-center bg-gradient-to-r from-blue p-4 mb-4">
         <h2 className="font-montserrat text-white font-semibold text-xl">
           Habilidades
