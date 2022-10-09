@@ -14,7 +14,7 @@ const Abilities = ({ abilities }) => {
 
   if (!abilities) return;
   return (
-    <div className="max-w-2xl max-w-3xl">
+    <div className="max-w-2xl lg:max-w-3xl">
       <div className="flex justify-center bg-gradient-to-r from-blue p-4 mb-4">
         <h2 className="font-montserrat text-white font-semibold text-xl">
           Habilidades
