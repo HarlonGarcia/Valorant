@@ -17,28 +17,28 @@ const NavBar = () => {
           className="flex items-center hover:text-red cursor-pointer mr-5 sm:mr-10 lg:mr-28"
         >
           <HomeIcon className="h-6 w-6 mr-2" />
-          <h3 className="hidden sm:block md:text-xl 2xl:text-3xl">Home</h3>
+          <h3 className="hidden sm:block md:text-lg 2xl:text-2xl">Home</h3>
         </NavLink>
         <NavLink
           to="/agents"
           className="flex items-center hover:text-red cursor-pointer mr-5 sm:mr-10 lg:mr-28"
         >
           <UserCircleIcon className="h-6 w-6 mr-2" />
-          <h3 className="hidden sm:block md:text-xl 2xl:text-3xl">Agents</h3>
+          <h3 className="hidden sm:block md:text-lg 2xl:text-2xl">Agents</h3>
         </NavLink>
         <NavLink
           to="/"
           className="flex items-center hover:text-red cursor-pointer mr-5 sm:mr-10 lg:mr-28"
         >
           <MapIcon className="h-6 w-6 mr-2" />
-          <h3 className="hidden sm:block md:text-xl 2xl:text-3xl">Maps</h3>
+          <h3 className="hidden sm:block md:text-lg 2xl:text-2xl">Maps</h3>
         </NavLink>
         <NavLink
           to="/"
           className="flex items-center hover:text-red cursor-pointer"
         >
           <BoltIcon className="h-6 w-6 sm:mr-2" />
-          <h3 className="hidden sm:block md:text-xl 2xl:text-3xl">Weapons</h3>
+          <h3 className="hidden sm:block md:text-lg 2xl:text-2xl">Weapons</h3>
         </NavLink>
       </ul>
     </div>

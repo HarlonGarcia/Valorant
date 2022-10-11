@@ -1,5 +1,6 @@
 import React from "react";
 import banner from "../assets/images/banner.jpg";
+import { motion } from "framer-motion";
 import { RocketLaunchIcon } from "@heroicons/react/24/solid";
 
 const BannerHero = () => {
@@ -24,12 +25,21 @@ const BannerHero = () => {
           inimigos nos modos Competitivo e Sem Ranque, além da Disputa da Spike
           e do Mata-Mata!
         </p>
-        <button className="bg-blue hover:bg-blue-dark hover:text-blue-light transition-all duration-500 hover:shadow-xl hover:shadow-blue-light py-2 px-12 md:px-6 text-white h-20 sm:h-32 md:block md:auto">
+        <motion.div
+          initial={{ opacity: 0, scale: 0.5 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{
+            duration: 0.5,
+            delay: 0.2,
+            ease: "easeIn",
+          }}
+          className="bg-blue hover:bg-blue-dark hover:text-blue-light whitespace-nowrap flex flex-col items-center justify-center transition-all duration-500 hover:shadow-xl hover:shadow-blue-light py-2 px-8 md:px-6 text-white h-20 sm:h-32 md:auto"
+        >
           <h3 className="mb-2 font-montserrat sm:mb-4 text-sm sm:text-xl">
             Começe a jogar
           </h3>
-          <RocketLaunchIcon className="h-6 w-6 mx-auto text-blue-light" />
-        </button>
+          <RocketLaunchIcon className="h-5 w-5 sm:h-6 sm:w-6 mx-auto text-blue-light" />
+        </motion.div>
       </div>
     </div>
   );

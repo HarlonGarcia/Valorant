@@ -37,7 +37,7 @@ const Agents = () => {
         setError(e);
       })
       .finally(() => {
-        setTimeout(() => setLoading(false), 500);
+        setTimeout(() => setLoading(false), 300);
       });
   }, []);
 
@@ -47,22 +47,21 @@ const Agents = () => {
 
   if (!agents) return;
   return (
-    <div className="flex flex-col bg-blue-dark h-full sm:w-full justify-center items-center p-8">
+    <div className="flex flex-col bg-blue-dark h-full sm:w-full justify-center items-center py-4 px-8">
       {loading && <LoadingSpinner />}
       {!loading && !error && (
         <h1 className="font-montserrat text-blue-light py-4 mb-4 md:text-lg xl:text-xl 2xl:text-3xl">
           *Clique no card do agente para ver mais informações
         </h1>
       )}
-      <motion.ul
-        className="flex flex-col sm:flex-row sm:flex-wrap justify-center"
-        variants={container}
-        initial="hidden"
-        animate="visible"
-      >
-        {!loading &&
-          !error &&
-          agents.map(
+      {!loading && !error && (
+        <motion.ul
+          className="flex flex-col sm:flex-row sm:flex-wrap justify-center"
+          variants={container}
+          initial="hidden"
+          animate="visible"
+        >
+          {agents.map(
             (
               {
                 uuid,
@@ -101,7 +100,8 @@ const Agents = () => {
               );
             }
           )}
-      </motion.ul>
+        </motion.ul>
+      )}
     </div>
   );
 };

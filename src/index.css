@@ -6,3 +6,16 @@
   font-family: "Montserrat";
   src: url("./assets/fonts/Montserrat-Regular.ttf");
 }
+
+*::-webkit-scrollbar {
+  width: 8px;
+}
+
+*::-webkit-scrollbar-track {
+  background: theme('colors.blue.dark');
+}
+
+*::-webkit-scrollbar-thumb {
+  /* border-radius: 10px; */
+  background-color: theme('colors.blue.link');
+}
