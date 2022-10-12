@@ -16,7 +16,7 @@ const MapCarousel = ({ maps }) => {
       showThumbs={false}
       emulateTouch
       swipeable
-      className="w-full flex justify-center border-red border-2 cursor-grab"
+      className="w-full flex justify-center cursor-grab"
     >
       {maps.map((map) => (
         <div className="relative flex justify-center" key={map.displayName}>

@@ -33,7 +33,7 @@ const BannerHero = () => {
             delay: 0.2,
             ease: "easeIn",
           }}
-          className="bg-blue hover:bg-blue-dark hover:text-blue-light whitespace-nowrap flex flex-col items-center justify-center transition-all duration-500 hover:shadow-xl hover:shadow-blue-light py-2 px-8 md:px-6 text-white h-20 sm:h-32 md:auto"
+          className="bg-blue hover:bg-blue-dark hover:text-blue-light cursor-pointer whitespace-nowrap flex flex-col items-center justify-center transition-all duration-500 hover:shadow-xl hover:shadow-blue-light py-2 px-8 md:px-6 text-white h-20 sm:h-32 md:auto"
         >
           <h3 className="mb-2 font-montserrat sm:mb-4 text-md sm:text-xl">
             Começe a jogar

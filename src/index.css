@@ -7,6 +7,11 @@
   src: url("./assets/fonts/Montserrat-Regular.ttf");
 }
 
+@font-face {
+  font-family: "Syne";
+  src: url("./assets/fonts/SyneMono-Regular.ttf");
+}
+
 @layer utilities {
   @variants responsive {
     .text-shadow {
