@@ -7,6 +7,26 @@
   src: url("./assets/fonts/Montserrat-Regular.ttf");
 }
 
+@layer utilities {
+  @variants responsive {
+    .text-shadow {
+      text-shadow: 2px 2px 4px #111;
+    }
+
+    .text-shadow-md {
+      text-shadow: 4px 4px 8px #111;
+    }
+
+    .text-shadow-lg {
+      text-shadow: 15px 15px 30px #111;
+    }
+
+    .text-shadow-none {
+      text-shadow: none;
+    }
+  }
+}
+
 *::-webkit-scrollbar {
   width: 8px;
 }

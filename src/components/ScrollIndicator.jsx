@@ -16,7 +16,7 @@ const ScrollIndicator = () => {
     <>
       {currentY !== 0 && (
         <motion.div
-          className="w-full fixed h-1 top-0 bg-gradient-to-r from-red-dark to-red bg-fixed origin-[0%]"
+          className="w-full fixed h-1.5 top-0 bg-gradient-to-r from-red-dark via-red to-red-dark bg-fixed origin-[0%] z-50"
           style={{ scaleX }}
         />
       )}
