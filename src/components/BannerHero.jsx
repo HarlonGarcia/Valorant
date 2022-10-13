@@ -12,7 +12,7 @@ const BannerHero = () => {
         alt=""
       />
       <div className="flex w-full bg-white py-6 md:px-24 md:py-12 mx-auto justify-between flex-col items-center md:flex-row ">
-        <p className="w-4/5 leading-relaxed text-center text-md text-blue mb-6 font-montserrat font-semibold items-center sm:text-lg md:text-left md:mr-6 md:mb-0">
+        <p className="w-4/5 leading-relaxed text-center text-md text-blue mb-6 font-montserrat font-semibold items-center sm:text-lg md:text-left md:mr-6 md:mb-0 lg:text-xl lg:w-full">
           <span className="text-red">Valorant</span> é um jogo eletrônico
           multijogador gratuito para jogar de tiro em primeira pessoa
           desenvolvido e publicado pela{" "}

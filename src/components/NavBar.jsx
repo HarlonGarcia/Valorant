@@ -4,7 +4,7 @@ import { HomeIcon, UserCircleIcon, BoltIcon } from "@heroicons/react/24/solid";
 
 const NavBar = () => {
   return (
-    <div className="w-screen bg-blue-dark border-blue border-b-4 mx-auto h-16 2xl:h-20 flex items-center justify-center md:w-full overflow-x-hidden">
+    <header className="w-screen bg-blue-dark border-blue border-b-4 mx-auto h-16 2xl:h-20 flex items-center justify-center md:w-full overflow-x-hidden">
       <ul className="flex text-white font-montserrat mx-auto">
         <NavLink
           end
@@ -29,7 +29,7 @@ const NavBar = () => {
           <h3 className="hidden sm:block md:text-lg 2xl:text-2xl">Weapons</h3>
         </NavLink>
       </ul>
-    </div>
+    </header>
   );
 };
 

@@ -25,7 +25,7 @@ const ScrollButton = () => {
     <div>
       {backToTop && (
         <button
-          className="fixed hidden sm:block w-12 h-12 bottom-10 right-10 lg:w-14 lg:h-14 2xl:w-20 2xl:h-20 rounded-full bg-blue-light/20 border-2 border-blue-light"
+          className="fixed hidden sm:block w-10 h-10 bottom-10 right-10 2xl:w-16 2xl:h-16 rounded-full bg-blue-light/20 border-2 border-blue-light"
           onClick={scrollToTop}
         >
           <ChevronDoubleUpIcon className="p-2 text-blue-light" />

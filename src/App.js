@@ -10,7 +10,7 @@ function App() {
   // class="dark"
 
   return (
-    <BrowserRouter>
+    <BrowserRouter style={{ position: "relative" }}>
       <NavBar />
       <ScrollIndicator />
       <Routes>

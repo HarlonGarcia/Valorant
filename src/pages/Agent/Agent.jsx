@@ -32,7 +32,7 @@ const Agent = () => {
 
   if (!agent) return;
   return (
-    <div className="flex flex-col bg-blue-dark h-full w-full items-center justify-center p-8 sm:py-14">
+    <div className="flex flex-col bg-blue-dark w-full items-center justify-center p-8 sm:py-14">
       {loading && <LoadingSpinner />}
       <div className="max-w-2xl lg:max-w-3xl mb-12">
         {!loading && !error && (

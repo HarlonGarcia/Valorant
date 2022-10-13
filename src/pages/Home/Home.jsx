@@ -6,6 +6,7 @@ import killjoy from "../../assets/images/killjoy.png";
 import { Link } from "react-router-dom";
 import { motion, useInView } from "framer-motion";
 import MapCarousel from "../../components/MapCarousel";
+import Footer from "../../components/Footer";
 import axios from "axios";
 
 const Home = () => {
@@ -24,7 +25,7 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="w-screen md:w-full">
+    <div className="w-screen md:w-full mb-24">
       <BannerHero />
       <div className="h-auto w-full">
         <AnimatedBg />
@@ -37,13 +38,13 @@ const Home = () => {
           }}
           className="flex flex-col h-full w-full py-6 px-4 justify-center items-center md:px-24 md:py-12"
         >
-          <div className="flex flex-col py-2 px-8 items-center mb-6 sm:mb-2 sm:px-8 sm:flex-row">
+          <div className="flex flex-col py-2 px-8 items-center mb-6 sm:mb-4 sm:px-8 sm:flex-row">
             <img
               src={killjoy}
               alt="killjoy"
               className="w-36 h-auto mb-4 sm:mr-8 sm:mb-0 md:w-52"
             />
-            <p className="text-white text-md text-center font-montserrat sm:text-left sm:text-lg ">
+            <p className="text-white text-md text-center font-montserrat sm:text-left sm:text-lg lg:text-xl">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Exercitationem quam similique nobis sint ut voluptatum? Totam,
               quod sint quis modi eius nisi rem doloribus at esse veniam aut
@@ -60,7 +61,7 @@ const Home = () => {
           </Link>
         </div>
       </div>
-      <div className="relative overflow-hidden shadow-inner shadow-xl shadow-blue-dark flex justify-center h-auto w-full text-white bg-red font-montserrat px-12 py-8 sm:px-20 md:px-28 md:py-12">
+      <div className="relative overflow-hidden flex justify-center h-auto w-full text-white bg-red font-montserrat px-12 py-8 sm:px-20 md:px-28 md:py-12">
         <motion.div
           ref={mapsRef}
           style={{
@@ -82,6 +83,7 @@ const Home = () => {
           MAPS
         </span>
       </div>
+      <Footer />
     </div>
   );
 };
