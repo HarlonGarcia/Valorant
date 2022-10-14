@@ -1,6 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import { HomeIcon, UserCircleIcon, BoltIcon } from "@heroicons/react/24/solid";
+import { HomeIcon, UserCircleIcon } from "@heroicons/react/24/solid";
 
 const NavBar = () => {
   return (
@@ -16,17 +16,10 @@ const NavBar = () => {
         </NavLink>
         <NavLink
           to="/agents"
-          className="flex items-center hover:text-red cursor-pointer mr-5 sm:mr-10 lg:mr-28"
-        >
-          <UserCircleIcon className="h-6 w-6 mr-2" />
-          <h3 className="hidden sm:block md:text-lg 2xl:text-2xl">Agents</h3>
-        </NavLink>
-        <NavLink
-          to="/"
           className="flex items-center hover:text-red cursor-pointer"
         >
-          <BoltIcon className="h-6 w-6 sm:mr-2" />
-          <h3 className="hidden sm:block md:text-lg 2xl:text-2xl">Weapons</h3>
+          <UserCircleIcon className="h-6 w-6 sm:mr-2" />
+          <h3 className="hidden sm:block md:text-lg 2xl:text-2xl">Agents</h3>
         </NavLink>
       </ul>
     </header>
