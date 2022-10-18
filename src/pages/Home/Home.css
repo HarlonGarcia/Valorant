@@ -1,8 +1,9 @@
 .btn {
   --light: theme('colors.red.light');
   --default: theme('colors.red.DEFAULT');
+  --darker: theme('colors.red.darker');
 
-  background-image: linear-gradient(to right, #F2294E, var(--light), var(--default));
+  background-image: linear-gradient(to right, var(--darker), var(--light), var(--default));
   background-size: 300% 100%;
 
   -o-transition: all .5s ease-in-out;

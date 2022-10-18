@@ -79,12 +79,12 @@ const Agents = () => {
                   onClick={handleClick}
                   key={index}
                   id={uuid}
-                  className="group bg-red mb-8 object-cover sm:flex-col sm:w-56 lg:w-64 sm:m-4 lg:m-4 border-4 border-blue sm:flex
+                  className="group bg-red mb-8 object-cover w-60 sm:flex-col sm:w-56 lg:w-64 sm:m-4 lg:m-4 border-4 border-blue sm:flex
                hover:bg-blue-light hover:scale-[1.025] cursor-pointer"
                   variants={item}
                 >
                   <img
-                    className="w-full bg-blue sm:h-56 sm:w-56 lg:w-64 lg:h-64 group-hover:grayscale-[55%]"
+                    className="w-60 bg-blue sm:h-56 sm:w-56 lg:w-64 lg:h-64 group-hover:grayscale-[55%]"
                     src={displayIcon}
                     alt={displayName}
                   />

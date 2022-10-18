@@ -21,7 +21,10 @@ const MapCarousel = ({ maps }) => {
       {maps.map((map) => (
         <div className="relative flex justify-center" key={map.displayName}>
           <img className="w-full" src={map.splash} alt={map.displayName}></img>
-          <p className="absolute bottom-0 py-1 text-lg bg-blue-dark/75 w-full sm:text-xl md:text-2xl md:py-2 lg:text-4xl">
+          <p
+            translate="no"
+            className="absolute bottom-0 py-1 text-lg bg-blue-dark/75 w-full sm:text-xl md:text-2xl md:py-2 lg:text-4xl"
+          >
             {map.displayName}
           </p>
         </div>

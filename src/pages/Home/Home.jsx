@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 import { motion, useInView } from "framer-motion";
 import MapCarousel from "../../components/MapCarousel";
 import Footer from "../../components/Footer";
+import logo from "../../assets/images/valorant-logotipo.svg";
 import axios from "axios";
 
 const Home = () => {
@@ -46,13 +47,18 @@ const Home = () => {
                 className="w-36 h-auto mb-4 sm:mr-8 sm:mb-0 md:w-52"
               />
               <p className="text-white text-md text-center font-montserrat sm:text-left sm:text-lg lg:text-xl">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Exercitationem quam similique nobis sint ut voluptatum? Totam,
-                quod sint quis modi eius nisi rem doloribus at esse veniam aut
-                soluta praesentium. Lorem ipsum dolor sit amet consectetur
-                adipisicing elit. Exercitationem quam similique nobis sint ut
-                voluptatum? Totam, quod sint quis modi eius nisi rem doloribus
-                at esse veniam aut soluta praesentium.
+                Mais do que armas e munição,{" "}
+                <span className="font-semibold text-blue-light bg-white/10 p-1">
+                  Valorant
+                </span>{" "}
+                inclui agentes com habilidades adaptativas, rápidas e letais,
+                que criam oportunidades para você exibir sua mecânica de tiro.
+                Cada Agente é único, assim como os momentos de destaque de cada
+                partida!
+                <br></br>
+                <br></br>
+                Mas é claro...a vitória vai depender da sua criatividade, do
+                trabalho em equipe e da sua precisão!
               </p>
             </div>
             <Link to="/agents">
@@ -62,7 +68,7 @@ const Home = () => {
             </Link>
           </div>
         </div>
-        <div className="relative overflow-hidden flex justify-center h-auto w-full text-white bg-red font-montserrat px-12 py-8 sm:px-20 md:px-28 md:py-12">
+        <div className="relative overflow-hidden flex justify-center h-auto w-full text-white bg-gradient-to-t from-red-darker to-red font-montserrat px-12 py-8 sm:px-20 md:px-28 md:py-12">
           <motion.div
             ref={mapsRef}
             style={{
@@ -77,11 +83,24 @@ const Home = () => {
             </h3>
             <MapCarousel maps={maps} />
           </motion.div>
-          <span className="font-syne text-8xl text-white/10 absolute top-0 z-0 sm:text-10xl md:text-12xl">
+          <span
+            translate="no"
+            className="font-syne text-8xl text-white/10 absolute top-0 z-0 sm:text-10xl md:text-12xl"
+          >
             VALORANT
           </span>
-          <span className="font-syne text-8xl text-white/10 absolute bottom-0 left-0 z-0 sm:left-10 sm:text-10xl md:text-12xl">
+          <span
+            translate="no"
+            className="font-syne text-8xl text-white/10 absolute bottom-0 left-0 z-0 sm:left-10 sm:text-9xl md:text-12xl"
+          >
             MAPS
+          </span>
+          <span>
+            <img
+              className="h-24 sm:h-48 md:w-60 lg:w-96 absolute bottom-10 right-0 lg:right-10"
+              src={logo}
+              alt="valorant logo"
+            />
           </span>
         </div>
       </div>
