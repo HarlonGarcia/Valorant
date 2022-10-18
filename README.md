@@ -18,3 +18,4 @@ Technologies used in this project.
 - [ReactJS](https://pt-br.reactjs.org/)
 - [Tailwind CSS](https://tailwindcss.com/)
 - [HeroIcons](https://heroicons.com/)
+- [FramerMotion](https://www.framer.com/motion/)
