@@ -17,6 +17,7 @@ import skye from "../assets/images/skye.png";
 import sova from "../assets/images/sova.png";
 import viper from "../assets/images/viper.png";
 import yoru from "../assets/images/yoru.png";
+import harbor from "../assets/images/harbor.png";
 
 export const agents_images = {
   Astra: astra,
@@ -25,6 +26,7 @@ export const agents_images = {
   Chamber: chamber,
   Cypher: cypher,
   Fade: fade,
+  Harbor: harbor,
   Jett: jett,
   "KAY/O": kayo,
   Killjoy: killjoy,
